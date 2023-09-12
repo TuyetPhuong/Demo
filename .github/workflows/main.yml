@@ -1,0 +1,27 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  run-unit-test-workflow:
+    name: Run Unit Test Workflow
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Unit Test Workflow
+        uses: actions/workflow-dispatch@v2
+        with:
+          workflow: unit-test.yml
+
+  run-check-style-workflow:
+    name: Run Check Style Workflow
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Check Style Workflow
+        uses: actions/workflow-dispatch@v2
+        with:
+          workflow: check-style.yml
