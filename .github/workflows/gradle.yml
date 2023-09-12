@@ -28,6 +28,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Run Unit test
+    - name: Build with Gradle
+      run: ./gradlew build
+    - name: Build with Gradle
+      run: chmod +x ./gradlew
+    - name: Make gradlew executable
       run: |
           chmod +x gradlew ./gradlew test
