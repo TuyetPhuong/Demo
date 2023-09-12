@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Trigger Unit Test Workflow
-        uses: actions/workflow-dispatch@v2
+        uses: workflow-dispatch@v2
         with:
           workflow: unit-test.yml
 
@@ -21,6 +21,6 @@ jobs:
 
     steps:
       - name: Trigger Check Style Workflow
-        uses: actions/workflow-dispatch@v2
+        uses: workflow-dispatch@v2
         with:
           workflow: check-style.yml
