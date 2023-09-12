@@ -30,4 +30,4 @@ jobs:
         distribution: 'temurin'
     - name: Run Unit test
       run: |
-          ./gradlew test
+          chmod +x gradlew ./gradlew test
