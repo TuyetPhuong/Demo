@@ -9,7 +9,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "test" ]
   pull_request:
     branches: [ "main" ]
 
@@ -32,3 +32,6 @@ jobs:
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
         arguments: build
+    - name: Run Unit test
+      run: |
+          ./gradlew test
