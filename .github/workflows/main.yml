@@ -6,21 +6,7 @@ on:
 
 jobs:
   RunUnitTest:
-    name: Run Unit Test Workflow
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Trigger Unit Test Workflow
-        uses: workflow-dispatch@v2
-        with:
-          workflow: unit-test.yml
+    uses: 'https://github.com/TuyetPhuong/Demo/tree/main/.github/workflows/unit-test.yml@main'
 
   RunCheckStyle:
-    name: Run Check Style Workflow
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Trigger Check Style Workflow
-        uses: workflow-dispatch@v2
-        with:
-          workflow: check-style.yml
+    uses: 'https://github.com/TuyetPhuong/Demo/tree/main/.github/workflows/check-style.yml@main'
