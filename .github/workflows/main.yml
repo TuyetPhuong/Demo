@@ -2,11 +2,10 @@ name: Main Workflow
 
 on:
   push:
-    branches:
-      - test
+  workflow_dispatch:
 
 jobs:
-  run-unit-test-workflow:
+  RunUnitTest:
     name: Run Unit Test Workflow
     runs-on: ubuntu-latest
 
@@ -16,7 +15,7 @@ jobs:
         with:
           workflow: unit-test.yml
 
-  run-check-style-workflow:
+  RunCheckStyle:
     name: Run Check Style Workflow
     runs-on: ubuntu-latest
 
