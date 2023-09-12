@@ -6,7 +6,7 @@ on:
 
 jobs:
   RunUnitTest:
-    uses: 'TuyetPhuong/Demo/.github/.github/workflows/unit-test.yml@main'
+    uses: 'TuyetPhuong/Demo/.github/workflows/unit-test.yml@main'
 
   RunCheckStyle:
-    uses: 'TuyetPhuong/Demo/.github/.github/workflows/check-style.yml@main'
+    uses: 'TuyetPhuong/Demo/.github/workflows/check-style.yml@main'
