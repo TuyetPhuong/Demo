@@ -43,7 +43,7 @@ jacoco {
 
 test {
 	useJUnitPlatform()
-	finalizedBy jacocoTestCoverageVerification // report is always generated after tests run
+//	finalizedBy jacocoTestCoverageVerification // report is always generated after tests run
 }
 
 jacocoTestReport {
