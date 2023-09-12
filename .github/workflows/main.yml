@@ -10,4 +10,4 @@ jobs:
 
   RunCheckStyle:
     uses: 'TuyetPhuong/Demo/.github/workflows/check-style.yml@main'
-    needs: RunUnitTest
+#    needs: RunUnitTest
