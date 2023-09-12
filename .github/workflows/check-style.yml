@@ -8,10 +8,12 @@
 name: Java CI with Gradle
 
 on:
-  push:
-    branches: [ "test" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
+    inputs:
+      action_ref:
+        default: 'main'
+        type: 'string'
+        required: false
 
 permissions:
   contents: read
@@ -30,6 +32,6 @@ jobs:
         distribution: 'temurin'
     - name: Make gradlew executable
       run: chmod +x ./gradlew
-    - name: Run UT
+    - name: Run checkstyle
       run: |
-          ./gradlew test
+          ./gradlew checkStyleMain
